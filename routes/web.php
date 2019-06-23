@@ -42,3 +42,7 @@ Route::prefix('admin')->group(function(){
   Route::get('/', 'AdminController@index')->name('admin.dashboard');
   Route::get('/logout','Auth\AdminLoginController@logout')->name('admin.logout');
 });
+
+Route::get('/produk/edit/{kode}','Produk@editObat');
+Route::post('/produk/editObatAction','Produk@editObatAction');
+Route::get('/produk/delete/{kode}','Produk@deleteObat');
