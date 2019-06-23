@@ -19,22 +19,48 @@
 <body>
 	<h3 align="center">Data Produk</h3>
 
-	<table align="center" width="60%" class="table table-border">
+	<table align="center" width="80%" class="table table-border">
 		@foreach($produk as $prd)
 		<tr>
-			<td>
-			<table align="center" width="60%">
-				
 			
-				<br>{{$prd->namaobat}}
-				<br>{{$prd->aturanpakai}}
-				<br>{{$prd->carakerjaobat}}
-				<br>{{$prd->efeksamping}}
-				<br>{{$prd->indikasi}}
-				<br>{{$prd->jenisobat}}
-				<br>{{$prd->komposisi}}
-				<br>{{$prd->kontraindikasi}}
-				<br>{{$prd->peringatanobat}}
+			<td>
+			<table align="center" width="80%">
+				<tr>
+						<td width="20%">Nama Obat </td>
+						<td>{{$prd->namaobat}}</td>
+				</tr>
+				<tr>
+						<td width="20%">Dosis Obat </td>
+						<td>{{$prd->aturanpakai}}</td>
+				</tr>
+				<tr>
+						<td width="20%">Komposisi Obat </td>
+						<td>{{$prd->komposisi}}</td>
+				</tr>
+				<tr>
+						<td width="20%">Efek Samping </td>
+						<td>{{$prd->efeksamping}}</td>
+				</tr>
+				<tr>
+						<td width="20%">Indikasi </td>
+						<td>{{$prd->indikasi}}</td>
+				</tr>
+				<tr>
+						<td width="20%">Jenis Obat </td>
+						<td>{{$prd->jenisobat}}</td>
+				</tr>
+				<tr>
+						<td width="20%">Kontra Indikasi </td>
+						<td>{{$prd->kontraindikasi}}</td>
+				</tr>
+				<tr>
+						<td width="20%">Peringatan  </td>
+						<td>{{$prd->peringatanobat}}</td>
+				</tr>
+				<tr>
+						<td align="center"><a href="/produk/edit/{{ $prd->kodeobat }}" class="btn btn-warning"> Edit</a></td>
+						<td align="center"><a href="/produk/delete/{{ $prd->kodeobat }}" class="btn btn-danger">Delete</a></td>
+				</tr>	
 			</table>
 			</td>
 			

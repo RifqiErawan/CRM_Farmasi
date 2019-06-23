@@ -19,17 +19,32 @@
 <body>
 	<h3 align="center">List Produk</h3>
 
-	<table align="center" width="60%" class="table table-border">
-		@foreach($produk as $prd)
-		<tr>
-			<td>
-				<br>{{$prd->namaobat}}
-				<br>{{$prd->aturanpakai}}
-				<br>{{$prd->komposisi}}
+	<table align="center" width="80%" class="table table-border">
+		@foreach($produk as $prd )
+		<tr>	
+			
+			<td style="border:2px">
+				<table width="80%" align="center">
+					<tr>
+						<td width="20%">Nama Obat </td>
+						<td>{{$prd->namaobat}}</td>
+					</tr>
+					<tr>
+						<td width="20%">Dosis Obat </td>
+						<td>{{$prd->aturanpakai}}</td>
+					</tr>
+					<tr>
+						<td width="20%">Komposisi Obat </td>
+						<td>{{$prd->komposisi}}</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><a align="right" class="btn btn-primary btn-sm" href="/produk/detail/{{ $prd->kodeobat }}">Detail</a></td>
+					</tr>
+				</table>
+				
+				   
 			</td>
-			<td>
-            <a class="btn btn-primary btn-sm" href="/produk/detail/{{ $prd->kodeobat }}">Detail</a> 
-          </td>
+			
 		</tr>
 		@endforeach
 	</table>

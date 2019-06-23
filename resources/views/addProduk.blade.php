@@ -23,47 +23,47 @@
 <body>
 	<h3 align="center">Tambah Data Produk</h3>
 
-	<table>
+	<table class="table table border">
 		<form action="/produk/addAction" method="post">
 	 {{ csrf_field() }}
-			<tr>
+			<tr class="form-group">
 				<td>Nama Obat</td>
-				<td><input type="text" name="namaobat"></td>
+				<td><input class="form-control" type="text" name="namaobat"></td>
 			</tr>
 			<tr>
 				<td>Aturan Pakai</td>
-				<td><textarea name="aturanpakai"></textarea></td>
+				<td><textarea class="form-control" name="aturanpakai"></textarea></td>
 			</tr>
 			<tr>
 				<td>Cara Kerja Obat</td>
-				<td><textarea name="carakerjaobat"></textarea></td>
+				<td><textarea name="carakerjaobat" class="form-control"></textarea></td>
 			</tr>
 			<tr>
 				<td>Efek Samping</td>
-				<td><textarea name="efeksamping"></textarea></td>
+				<td><textarea class="form-control" name="efeksamping"></textarea></td>
 			</tr>
 			<tr>
 				<td>Indikasi</td>
-				<td><textarea name="indikasi"></textarea></td>
+				<td><textarea name="indikasi" class="form-control"></textarea></td>
 			</tr>
 			<tr>
 				<td>Jenis Obat</td>
-				<td><input type="text" name="jenisobat"></td>
+				<td><input type="text" name="jenisobat" class="form-control"></td>
 			</tr>
 			<tr>
 				<td>Komposisi</td>
-				<td><textarea name="komposisi"></textarea></td>
+				<td><textarea class="form-control" name="komposisi"></textarea></td>
 			</tr>
 			<tr>
 				<td>Kontra Indikasi</td>
-				<td><textarea name="kontraindikasi"></textarea></td>
+				<td><textarea name="kontraindikasi" class="form-control"></textarea></td>
 			</tr>
 			<tr>
 				<td>Peringatan Obat</td>
-				<td><textarea name="peringatanobat"></textarea></td>
+				<td><textarea class="form-control" name="peringatanobat"></textarea></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" name="submit" value="Submit Data"></td>
+				<td colspan="2" align="center"><input type="submit" name="submit" value="Submit Data" class="btn btn-primary"></td>
 			</tr>
 		</form>	
 	</table>
