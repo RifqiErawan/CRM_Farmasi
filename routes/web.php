@@ -30,3 +30,7 @@ Route::get('/produk/add','Produk@addProduk');
 Route::post('/produk/addAction','Produk@addAction');
 Route::get('/produk/detail/{kode}','Produk@detailObat');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminController@index');
