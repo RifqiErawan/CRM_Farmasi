@@ -30,9 +30,7 @@ Route::get('/produk/add','Produk@addProduk');
 Route::post('/produk/addAction','Produk@addAction');
 Route::get('/produk/detail/{kode}','Produk@detailObat');
 <<<<<<< HEAD
-Route::get('/produk/edit/{kode}','Produk@editObat');
-Route::post('/produk/editObatAction','Produk@editObatAction');
-Route::get('/produk/delete/{kode}','Produk@deleteObat');
+
 =======
 
 Auth::routes();
