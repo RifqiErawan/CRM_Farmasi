@@ -29,12 +29,9 @@ Route::get('/produk','Produk@show');
 Route::get('/produk/add','Produk@addProduk');
 Route::post('/produk/addAction','Produk@addAction');
 Route::get('/produk/detail/{kode}','Produk@detailObat');
-<<<<<<< HEAD
-
-=======
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index');
->>>>>>> 42773a78cd9f7a962825186fd9957de4d0042034
+
+Route::get('/produk/edit/{kode}','Produk@editObat');
+Route::post('/produk/editObatAction','Produk@editObatAction');
+Route::get('/produk/delete/{kode}','Produk@deleteObat');
