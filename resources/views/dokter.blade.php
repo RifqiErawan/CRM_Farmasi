@@ -37,8 +37,8 @@
 			<td>{{ $d->spesialis }}</td>
 			<td>{{ $d->kontak }}</td>
 			<td>
-            <a class="btn btn-warning btn-sm" href="/datadokter/edit/{{ $d->id_dokter }}">Edit</a> |
-            <a class="btn btn-danger btn-sm" href="/datadokter/hapus/{{ $d->id_dokter }}">Hapus</a>
+            <a class="btn btn-warning btn-sm" href="/datadokter/edit/{{ $d->id_ }}">Edit</a> |
+            <a class="btn btn-danger btn-sm" href="/datadokter/hapus/{{ $d->id_ }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
