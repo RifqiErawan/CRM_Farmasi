@@ -29,6 +29,9 @@ Route::get('/produk','Produk@show');
 Route::get('/produk/add','Produk@addProduk');
 Route::post('/produk/addAction','Produk@addAction');
 Route::get('/produk/detail/{kode}','Produk@detailObat');
+Route::get('/medrep','MedRepController@show');
+Route::get('/medrep/addTarget/{kode}','MedRepController@inputTarget');
+Route::post('/medrep/addAction','MedRepController@addAction');
 
 
 Auth::routes();

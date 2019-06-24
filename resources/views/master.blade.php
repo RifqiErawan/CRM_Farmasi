@@ -20,7 +20,8 @@
 			<a class="nav-link" href="/besarpotensi/home">Input Besar Potensi</a>
 
 			<a href="/produk" class="nav-link">List Produk</a>
-			<a href="/produk/add" class="nav-link">Input Produk Baru</a>
+			<a href="/medrep" class="nav-link">Data Medrep</a>
+			
 		</nav>
 	</div>
 
