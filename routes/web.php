@@ -59,3 +59,5 @@ Route::get('/produk/delete/{kode}','Produk@deleteObat');
 Route::get('/rencanaKunjungan', 'RencanaKunjunganController@index');
 Route::get('/rencanaKunjungan/laporan/{id}', 'RencanaKunjunganController@laporan');
 Route::post('/rencanaKunjungan/laporanAction','RencanaKunjunganController@laporanAction');
+
+Route::get('/produk/export_excel','Produk@export');

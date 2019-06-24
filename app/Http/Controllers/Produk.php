@@ -5,12 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use App\produkModel;
+
+use App\Exports\ProdukExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
+//yoga
 class Produk extends Controller
 {
     public function show(){
 
-    	$produk = DB::table('produk')->get();
-
+    	$produk = produkModel::all();
     	return view('produk',['produk' => $produk]);
     }
 
@@ -65,5 +71,9 @@ class Produk extends Controller
     	DB::table('produk')->where('kodeobat',$kodeobat)->delete();
 
     	return redirect('/produk');
+    }
+
+    public function export(){
+        return Excel::download(new ProdukExport,'Produk.xlsx');
     }
 }

@@ -24,11 +24,12 @@
 		<form action="/produk/editObatAction" method="post">
 			 {{ csrf_field() }}
 			<tr>
-				<td><input type="hidden" name="kodeobat" value="{{$prd->kodeobat}}"></td>
+				<input type="hidden" name="kodeobat" value="{{$prd->kodeobat}}">
+				<input type="hidden" name="namaobat" value="{{$prd->namaobat}}">
 			</tr>
 			<tr class="form-group">
 				<td>Nama Obat</td>
-				<td><input class="form-control" type="text" name="namaobat" value="{{$prd->namaobat}}"></td>
+				<td>{{$prd->namaobat}}</td>
 			</tr>
 			<tr>
 				<td>Aturan Pakai</td>
