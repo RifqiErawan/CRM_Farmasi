@@ -32,6 +32,10 @@
 			<!-- <td>{{ $d->kontak }}</td> -->
 		</tr>
 		@endforeach
+		<tr>
+		<th>Total</th>
+		<td>{{ $total_peresepan }}</td>
+		</tr>
 		</tbody>
 	</table>
 

@@ -5,7 +5,9 @@
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script type="text/javascript" src="/js/rupiah.js"></script>
 	<script type="text/javascript" src="/js/app.js"></script>
+
 </head>
 <body class="">
 
@@ -18,12 +20,7 @@
 		<a class="navbar-brand" href="#">Pengelohaan Data Dokter</a>
 			<a class="nav-link active"href="/datadokter">Data Dokter</a>
 			<a class="nav-link" href="/besarpotensi/home">Input Besar Potensi</a>
-<<<<<<< HEAD
 			<a class="nav-link" href="/klasifikasi">Klasifikasi Dokter</a>
-		
-
-=======
->>>>>>> 5ffe2f24846cb3b84f3c3b4818dcb07e8bcb32ff
 			<a href="/produk" class="nav-link">List Produk</a>
 			<a href="/medrep" class="nav-link">Data Medrep</a>
 			<a href="/produk/add" class="nav-link">Input Produk Baru</a>

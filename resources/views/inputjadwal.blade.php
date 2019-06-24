@@ -41,9 +41,18 @@
  </div>
 
  <div class="form-group row">
-    <label class="col-sm-2 col-form-label" >Hari</label>
+    <label for="hari" class="col-sm-2 col-form-label" >Hari</label>
          <div class="col-sm-10">
-             <input class="form-control" type="text" name="hari" placeholder="Hari Praktek" required="required">
+         <select class="form-control" name="hari" id="hari" required="required">
+               <option>Senin</option>
+               <option>Selasa</option>
+               <option>Rabu</option>
+               <option>Kamis</option>
+               <option>Jumat</option>
+               <option>Sabtu</option>
+               <option>Minggu</option>
+          </select>
+             <!-- <input class="form-control" type="text" name="hari" placeholder="Hari Praktek" required="required"> -->
         </div>
  </div>
     

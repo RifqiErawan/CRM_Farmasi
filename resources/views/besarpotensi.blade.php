@@ -31,7 +31,7 @@
 			<td>{{ $d->spesialisasi }}</td>
 			<td>
 			@if (empty($d->potensi))
-            <a class="btn btn-primary btn-sm" href="/besarpotensi/input_potensi/{{ $d->id_dokter }}">Hitung</a> 
+            <a class="btn btn-primary btn-sm" href="/besarpotensi/input_potensi/{{ $d->id }}">Hitung</a> 
 			@endif
 		  </td>
 		</tr>
