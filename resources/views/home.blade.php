@@ -34,7 +34,7 @@
 		<tbody>
 		<tr>
 			<td>{{ $d->nama }}</td>
-			<td>{{ $d->spesialis }}</td>
+			<td>{{ $d->spesialisasi }}</td>
 			<td>{{ $d->kontak }}</td>
 			<td>
             <a class="btn btn-warning btn-sm" href="/datadokter/edit/{{ $d->id_dokter }}">Edit</a> |
