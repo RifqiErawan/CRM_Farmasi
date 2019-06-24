@@ -12,33 +12,8 @@
 */
 //default route
 Route::get('/', function () {
-    return view('master');
+    return view('welcome');
 });
-
-//route saya
-Route::get('/datadokter','DatadokterController@home');
-Route::get('/datadokter/input','DatadokterController@input');
-Route::post('/datadokter/store','DatadokterController@store');
-Route::get('/datadokter/edit/{id}','DatadokterController@edit');
-Route::post('/datadokter/update','DatadokterController@update');
-Route::get('/datadokter/hapus/{id}','DatadokterController@hapus');
-Route::get('/besarpotensi/home','BesarPotensiController@home');
-Route::post('/besarpotensi/store','BesarPotensiController@store');
-Route::get('/besarpotensi/input_potensi/{id}','BesarPotensiController@input_potensi');
-Route::post('/besarpotensi/hitung','BesarPotensiController@hitung');
-Route::get('/produk','Produk@show');
-Route::get('/produk/add','Produk@addProduk');
-Route::post('/produk/addAction','Produk@addAction');
-Route::get('/produk/detail/{kode}','Produk@detailObat');
-Route::get('/medrep','MedRepController@show');
-Route::get('/medrep/addTarget/{kode}','MedRepController@inputTarget');
-Route::post('/medrep/addAction','MedRepController@addAction');
-
-Route::get('/klasifikasi','KlasifikasiController@home');
-Route::get('/jadwaldokter/input/{id}','JadwalDokterController@inputjadwal');
-Route::post('/jadwaldokter/store/{dokter}','JadwalDokterController@store');
-
-
 
 Auth::routes();
 
@@ -48,13 +23,43 @@ Route::get('/users/logout','Auth\LoginController@userLogout')->name('user.logout
 Route::prefix('admin')->group(function(){
   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-  Route::get('/', 'AdminController@index')->name('admin.dashboard');
   Route::get('/logout','Auth\AdminLoginController@logout')->name('admin.logout');
+  Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
 
-Route::get('/produk/edit/{kode}','Produk@editObat');
-Route::post('/produk/editObatAction','Produk@editObatAction');
-Route::get('/produk/delete/{kode}','Produk@deleteObat');
+Route::prefix('datadokter')->group(function(){
+  Route::get('/','DatadokterController@home');
+  Route::get('/input','DatadokterController@input');
+  Route::post('/store','DatadokterController@store');
+  Route::get('/edit/{id}','DatadokterController@edit');
+  Route::post('/update','DatadokterController@update');
+  Route::get('/hapus/{id}','DatadokterController@hapus');
+});
+
+Route::prefix('besarpotensi')->group(function(){
+  Route::get('/home','BesarPotensiController@home');
+  Route::post('/store','BesarPotensiController@store');
+  Route::get('/input_potensi/{id}','BesarPotensiController@input_potensi');
+  Route::post('/hitung','BesarPotensiController@hitung');
+});
+
+Route::prefix('produk')->group(function(){
+  Route::get('/add','Produk@addProduk');
+  Route::post('/addAction','Produk@addAction');
+  Route::get('/detail/{kode}','Produk@detailObat');
+  Route::get('/edit/{kode}','Produk@editObat');
+  Route::post('/editObatAction','Produk@editObatAction');
+  Route::get('/delete/{kode}','Produk@deleteObat');
+  Route::get('/','Produk@show');
+});
+
+Route::get('/medrep','MedRepController@show');
+Route::get('/medrep/addTarget/{kode}','MedRepController@inputTarget');
+Route::post('/medrep/addAction','MedRepController@addAction');
+
+Route::get('/klasifikasi','KlasifikasiController@home');
+Route::get('/jadwaldokter/input/{id}','JadwalDokterController@inputjadwal');
+Route::post('/jadwaldokter/store/{dokter}','JadwalDokterController@store');
 
 Route::get('/rencanaKunjungan', 'RencanaKunjunganController@index');
 Route::get('/rencanaKunjungan/laporan/{id}', 'RencanaKunjunganController@laporan');
