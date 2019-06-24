@@ -30,6 +30,9 @@ Route::get('/produk','Produk@show');
 Route::get('/produk/add','Produk@addProduk');
 Route::post('/produk/addAction','Produk@addAction');
 Route::get('/produk/detail/{kode}','Produk@detailObat');
+Route::get('/medrep','MedRepController@show');
+Route::get('/medrep/addTarget/{kode}','MedRepController@inputTarget');
+Route::post('/medrep/addAction','MedRepController@addAction');
 
 Route::get('/klasifikasi','KlasifikasiController@home');
 Route::get('/jadwaldokter/input/{id}','JadwalDokterController@inputjadwal');
@@ -52,3 +55,7 @@ Route::prefix('admin')->group(function(){
 Route::get('/produk/edit/{kode}','Produk@editObat');
 Route::post('/produk/editObatAction','Produk@editObatAction');
 Route::get('/produk/delete/{kode}','Produk@deleteObat');
+
+Route::get('/rencanaKunjungan', 'RencanaKunjunganController@index');
+Route::get('/rencanaKunjungan/laporan/{id}', 'RencanaKunjunganController@laporan');
+Route::post('/rencanaKunjungan/laporanAction','RencanaKunjunganController@laporanAction');
