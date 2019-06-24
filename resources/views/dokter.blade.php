@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,18 +8,18 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 
 <div class="container">
 		<div class="card">
 			<div class="card-body">
 <h3>Data Dokter</h3>
- 
+
 	<a href="/datadokter/input"> + Tambah Dokter Baru</a>
-	
+
 	<br/>
 	<br/>
- 
+
 	<table class="table table-bordered">
 	<thead>
 		<tr>
@@ -29,7 +29,7 @@
 			<th>Opsi</th>
 		</tr>
 		</thead>
-	
+
 		@foreach($dokter as $d)
 		<tbody>
 		<tr>
@@ -46,7 +46,7 @@
 	</table>
 
 	<br/>
-				
+
 				</div>
 		</div>
 	</div>

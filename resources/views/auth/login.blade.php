@@ -11,7 +11,7 @@
             <p class="card-category">Login to access dashboard</p>
           </div>
           <div class="card-body col-md-12 p-4">
-            <form method="POST" action="{{ route('admin.login.submit') }}">
+            <form method="POST" action="{{ route('login') }}">
               @csrf
               <div class="form-group row">
                   <label for="email" class="bmd-label-floating">{{ __('E-Mail Address') }}</label>

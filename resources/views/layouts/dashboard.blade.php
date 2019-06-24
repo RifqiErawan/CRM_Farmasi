@@ -27,6 +27,53 @@
 
 	      <div class="sidebar-wrapper">
 	        <ul class="nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="{{route('admin.dashboard')}}">
+                <i class="material-icons">dashboard</i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+                <i class="material-icons">person</i>
+                <p>Medical Representative</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+                <i class="material-icons">content_paste</i>
+                <p>Kelola Tugas</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+                <i class="material-icons">library_books</i>
+                <p>Laporan</p>
+              </a>
+            </li>
+            <!--  -->
+            <li class="nav-item ">
+              <a class="nav-link active"href="/datadokter">Data Dokter</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/besarpotensi/home">Input Besar Potensi</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/klasifikasi">Klasifikasi Dokter</a>
+            </li>
+            <li class="nav-item ">
+              <a href="/produk" class="nav-link">List Produk</a>
+            </li>
+            <li class="nav-item ">
+              <a href="/medrep" class="nav-link">Data Medrep</a>
+            </li>
+            <li class="nav-item ">
+              <a href="/rencanaKunjungan" class="nav-link">Rencana Kunjungan</a>
+            </li>
+            <li class="nav-item ">
+              <a href="/laporanKunjungan" class="nav-link">Laporan Kunjungan</a>
+            </li>
+            </li>
 	          @yield('sidebar')
 	        </ul>
 	      </div>
@@ -38,7 +85,11 @@
 	      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
 	        <div class="container-fluid">
 	          <div class="navbar-wrapper">
-	            <a class="navbar-brand" href="">Dashboard</a>
+              @if($user = Auth::user())
+                <span class="navbar-brand">Hello, {{ Auth::user()->name }} !</span>
+              @else
+                <span class="navbar-brand">Hello, Guest !</span>
+              @endif
 	          </div>
 	          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
 	            <span class="sr-only">Toggle navigation</span>
@@ -46,32 +97,9 @@
 	            <span class="navbar-toggler-icon icon-bar"></span>
 	            <span class="navbar-toggler-icon icon-bar"></span>
 	          </button>
+            @if($user = Auth::user())
 	          <div class="collapse navbar-collapse justify-content-end">
 	            <ul class="navbar-nav">
-	              <li class="nav-item">
-	                <a class="nav-link" href="#pablo">
-	                  <i class="material-icons">dashboard</i>
-	                  <p class="d-lg-none d-md-block">
-	                    Stats
-	                  </p>
-	                </a>
-	              </li>
-	              <li class="nav-item dropdown">
-	                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                  <i class="material-icons">notifications</i>
-	                  <span class="notification">5</span>
-	                  <p class="d-lg-none d-md-block">
-	                    Some Actions
-	                  </p>
-	                </a>
-	                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-	                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-	                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-	                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-	                  <a class="dropdown-item" href="#">Another Notification</a>
-	                  <a class="dropdown-item" href="#">Another One</a>
-	                </div>
-	              </li>
 	              <li class="nav-item dropdown">
 	                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                  <i class="material-icons">person</i>
@@ -80,18 +108,16 @@
 	                  </p>
 	                </a>
 	                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-	                  <span>Hello @auth('admin'){, {{ Auth::user()->name }} !}@endauth</span>
-	                  <a class="dropdown-item" href="#">Settings</a>
-	                  <div class="dropdown-divider"></div>
-	                  <a class="dropdown-item" href="#">Log out</a>
+                    <div class="dropdown-divider"></div>
 
                     @auth('admin')
                     <a class="dropdown-item" href="{{ route('admin.logout') }}">
                         Sign Out from Admin
                     </a>
                     @endauth
+
                     @auth('web')
-                    <a class="dropdown-item" href="{{ route('kostariateam.logout') }}">
+                    <a class="dropdown-item" href="{{ route('user.logout') }}">
                         Sign Out
                     </a>
                     @endauth
@@ -100,6 +126,9 @@
 	              </li>
 	            </ul>
 	          </div>
+            @else
+              <a href="{{route('login')}}"></a>
+            @endif
 	        </div>
 	      </nav>
 	      <!-- End Navbar -->

@@ -22,8 +22,26 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::create([
-          'name'  => 'Rico',
+          'name'  => 'Rico Joviandri',
           'email' => 'rico_medrep@farmasi.com',
+          'password'  => bcrypt('12345678')
+        ]);
+
+        User::create([
+          'name'  => 'Yoga Subagja',
+          'email' => 'yoga_medrep@farmasi.com',
+          'password'  => bcrypt('12345678')
+        ]);
+
+        User::create([
+          'name'  => 'Daffa Radiffanka',
+          'email' => 'daffa_medrep@farmasi.com',
+          'password'  => bcrypt('12345678')
+        ]);
+
+        User::create([
+          'name'  => 'Rindu Mustika',
+          'email' => 'rindu_medrep@farmasi.com',
           'password'  => bcrypt('12345678')
         ]);
 

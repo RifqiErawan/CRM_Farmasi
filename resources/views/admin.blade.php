@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('sidebar')
-<li class="nav-item ">
+<!-- <li class="nav-item ">
   <a class="nav-link" href="{{route('admin.dashboard')}}">
     <i class="material-icons">dashboard</i>
     <p>Dashboard</p>
@@ -23,9 +23,10 @@
   <a class="nav-link" href="./typography.html">
     <i class="material-icons">library_books</i>
     <p>Laporan</p>
-  </a>
+  </a> -->
 </li>
 @endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

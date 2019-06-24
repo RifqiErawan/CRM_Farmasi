@@ -19,6 +19,7 @@ class MedRepController extends Controller
     	$medrep = DB::table('users')->where('id',$id)->get();
     	return view('addTarget',['medrep'=>$medrep]);
     }
+    
     public function addAction(Request $med){
 
     	DB::table('users')->where('id', $med->id)->
