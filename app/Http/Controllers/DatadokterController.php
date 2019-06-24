@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Dokter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -9,7 +9,7 @@ class DatadokterController extends Controller
 {
     public function home(){
         // mengambil data dari table dokter
-    	$dokter = DB::table('dokter')->get();
+    	$dokter = Dokter::all();
  
     	// mengirim data dokter ke view index
     	return view('home',['dokter' => $dokter]);
@@ -32,10 +32,10 @@ class DatadokterController extends Controller
 	    return redirect('/datadokter');
     }
 
-    public function edit($id_dokter)
+    public function edit($id)
     {
         // mengambil data pegawai berdasarkan id yang dipilih
-        $dokter = DB::table('dokter')->where('id_dokter',$id_dokter)->get();
+        $dokter = DB::table('dokter')->where('id',$id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
         return view('edit',['dokter' => $dokter]);
     
@@ -44,9 +44,9 @@ class DatadokterController extends Controller
     public function update(Request $request)
     {
         // update data dokter
-        DB::table('dokter')->where('id_dokter',$request->id_dokter)->update([
+        DB::table('dokter')->where('id',$request->id)->update([
             'nama' => $request->nama,
-            'spesialis' => $request->spesialis,
+            'spesialisasi' => $request->spesialisasi,
             'kontak' => $request->kontak,
         ]);
         // alihkan halaman ke halaman pegawai
@@ -54,13 +54,16 @@ class DatadokterController extends Controller
     }
 
     // method untuk hapus data pegawai
-    public function hapus($id_dokter)
+    public function hapus($id)
     {
         // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('dokter')->where('id_dokter',$id_dokter)->delete();
+        DB::table('dokter')->where('id',$id)->delete();
             
         // alihkan halaman ke halaman pegawai
         return redirect('/datadokter');
     }
+
+
+
 
 }

@@ -30,16 +30,16 @@ class BesarPotensiController extends Controller
 		// insert data ke table besar_potensi
 
 		
-	    DB::table('besar_potensi')->insert([
-		    'nama' => $request->nama,
-		    'banyak_produk' => $request->bayak_produk,
-            'h_obat_sejenis' => $request->h_obat_sejenis,
-		    'h_obat_sejenis_resep' => $request->h_obat_sejenis_resep,
-		    'jum_hari_praktek' => $request->jum_hari_praktek
+	    // DB::table('besar_potensi')->insert([
+		//     'nama' => $request->nama,
+		//     'banyak_produk' => $request->bayak_produk,
+        //     'h_obat_sejenis' => $request->h_obat_sejenis,
+		//     'h_obat_sejenis_resep' => $request->h_obat_sejenis_resep,
+		//     'jum_hari_praktek' => $request->jum_hari_praktek
             
-	    ]);
-	    // alihkan halaman ke halaman pegawai
-	    return redirect('/datadokter');
+	    // ]);
+	    // // alihkan halaman ke halaman pegawai
+	    // return redirect('/datadokter');
 	}
 	
 	public function hitung(Request $request){

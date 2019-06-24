@@ -27,7 +27,7 @@
 	<form action="/besarpotensi/hitung" method="POST">
 	<div class="form-group row">
 		{{ csrf_field() }}
-		<input type="hidden" name="id_dokter" value="{{ $d->id_dokter }}"> 
+		<input type="hidden" name="id" value="{{ $d->id }}"> 
 		<label class="col-sm-2 col-form-label" >Nama</label>
 			<div class="col-sm-10">
 		 		<span>{{$d->nama}}</span> 

@@ -16,8 +16,10 @@ class CreateJadwalPraktekTable extends Migration
         Schema::create('jadwal_praktek', function (Blueprint $table) {
             $table->bigIncrements('id')->array_unique;
             $table->string('alamat');
-            $table->date('waktu');
-            $table->string('idDokter');
+            $table->time('waktu_buka');
+            $table->time('waktu_tutup');
+            $table->string('hari');
+            $table->string('id_dokter');
 
         });
     }

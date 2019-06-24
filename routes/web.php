@@ -31,6 +31,11 @@ Route::get('/produk/add','Produk@addProduk');
 Route::post('/produk/addAction','Produk@addAction');
 Route::get('/produk/detail/{kode}','Produk@detailObat');
 
+Route::get('/klasifikasi','KlasifikasiController@home');
+Route::get('/jadwaldokter/input/{id}','JadwalDokterController@inputjadwal');
+Route::post('/jadwaldokter/store/{dokter}','JadwalDokterController@store');
+
+
 
 Auth::routes();
 

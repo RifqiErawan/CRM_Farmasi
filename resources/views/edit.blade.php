@@ -25,7 +25,7 @@
 	<form action="/datadokter/update" method="post">
 	<div class="form-group row">
 		{{ csrf_field() }}
-		<input type="hidden" name="id_dokter" value="{{ $d->id_dokter }}"> 
+		<input type="hidden" name="id" value="{{ $d->id }}"> 
 		<label class="col-sm-2 col-form-label" >Nama</label>
 			<div class="col-sm-10">
 		 		<input type="text" required="required" name="nama" value="{{ $d->nama }}"> 
@@ -35,7 +35,7 @@
 	<div class="form-group row">
 		<label class="col-sm-2 col-form-label" >Spesialis</label>
 		<div class="col-sm-10">
-		 	<input type="text" required="required" name="spesialis" value="{{ $d->spesialis }}"> 
+		 	<input type="text" required="required" name="spesialisasi" value="{{ $d->spesialisasi }}"> 
 		 </div>
 	</div>
 

@@ -18,6 +18,8 @@
 		<a class="navbar-brand" href="#">Pengelohaan Data Dokter</a>
 			<a class="nav-link active"href="/datadokter">Data Dokter</a>
 			<a class="nav-link" href="/besarpotensi/home">Input Besar Potensi</a>
+			<a class="nav-link" href="/klasifikasi">Klasifikasi Dokter</a>
+		
 
 			<a href="/produk" class="nav-link">List Produk</a>
 			<a href="/produk/add" class="nav-link">Input Produk Baru</a>
