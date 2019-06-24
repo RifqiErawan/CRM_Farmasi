@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,11 +8,11 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 <div class="container">
 		<div class="card">
 			<div class="card-body">
- 
+
  <br/>
  <br/>
 
@@ -20,9 +20,9 @@
 	<h3 align="center">List Medrep</h3>
 
 	<table align="center" width="80%" class="table table-border">
-		
-		<tr style="border: 2px">	
-			
+
+		<tr style="border: 2px">
+
 			<td style="border:2px">
 					<tr>
 						<th width="20%">No</th>
@@ -42,9 +42,9 @@
 						</td>
 
 					</tr>
-				   
+
 			</td>
-			
+
 		</tr>
 		@endforeach
 	</table>

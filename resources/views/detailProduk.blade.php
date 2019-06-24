@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,12 +8,12 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 <div class="container">
 		<div class="card">
 			<div class="card-body">
 
- 
+
  <br/>
  <br/>
 <body>
@@ -22,7 +22,7 @@
 	<table align="center" width="80%" class="table table-border">
 		@foreach($produk as $prd)
 		<tr>
-			
+
 			<td>
 			<table align="center" width="80%">
 				<tr>
@@ -60,15 +60,15 @@
 				<tr>
 						<td align="center"><a href="/produk/edit/{{ $prd->kodeobat }}" class="btn btn-warning"> Edit</a></td>
 						<td align="center"><a href="/produk/delete/{{ $prd->kodeobat }}" class="btn btn-danger">Delete</a></td>
-				</tr>	
+				</tr>
 			</table>
 			</td>
-			
+
 		</tr>
 		@endforeach
 	</table>
 	<a href="/produk"> Kembali</a>
-	
+
 </body>
 
 

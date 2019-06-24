@@ -1,56 +1,44 @@
-<!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
-<!-- isi bagian judul halaman -->
-<!-- cara penulisan isi section yang pendek -->
+@section('sidebar')
+<li class="nav-item ">
+  <a class="nav-link" href="{{route('admin.dashboard')}}">
+    <i class="material-icons">dashboard</i>
+    <p>Dashboard</p>
+  </a>
+</li>
+<li class="nav-item ">
+  <a class="nav-link" href="#">
+    <i class="material-icons">person</i>
+    <p>Medical Representative</p>
+  </a>
+</li>
+<li class="nav-item ">
+  <a class="nav-link" href="#">
+    <i class="material-icons">content_paste</i>
+    <p>Kelola Tugas</p>
+  </a>
+</li>
+<li class="nav-item ">
+  <a class="nav-link" href="#">
+    <i class="material-icons">library_books</i>
+    <p>Laporan</p>
+  </a>
+</li>
+<!--  -->
+<a class="nav-link active"href="/datadokter">Data Dokter</a>
+<a class="nav-link" href="/besarpotensi/home">Input Besar Potensi</a>
+<a class="nav-link" href="/klasifikasi">Klasifikasi Dokter</a>
+<a href="/produk" class="nav-link">List Produk</a>
+<a href="/medrep" class="nav-link">Data Medrep</a>
+<a href="/rencanaKunjungan" class="nav-link">Rencana Kunjungan</a>
+<a href="/laporanKunjungan" class="nav-link">Laporan Kunjungan</a>
+</li>
+
+@endsection
 
 
 
-<!-- isi bagian konten -->
-<!-- cara penulisan isi section yang panjang -->
 @section('konten')
-
-<div class="container">
-		<div class="card">
-			<div class="card-body">
-<h3>Data Dokter</h3>
- 
-	<a href="/datadokter/input"> + Tambah Dokter Baru</a>
-	
-	<br/>
-	<br/>
- 
-	<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>Nama</th>
-			<th>Spesialis</th>
-			<th>Kontak</th>
-			<th>Opsi</th>
-		</tr>
-		</thead>
-	
-		@foreach($dokter as $d)
-		<tbody>
-		<tr>
-			<td>{{ $d->nama }}</td>
-			<td>{{ $d->spesialisasi }}</td>
-			<td>{{ $d->kontak }}</td>
-			<td>
-            <a class="btn btn-warning btn-sm" href="/datadokter/edit/{{ $d->id }}">Edit</a> |
-            <a class="btn btn-danger btn-sm" href="/datadokter/hapus/{{ $d->id }}">Hapus</a> |
-            <a class="btn btn-danger btn-sm" href="/jadwaldokter/input/{{ $d->id }}">Jadwal Dokter</a>
-
-			</td>
-		</tr>
-		@endforeach
-		</tbody>
-	</table>
-
-	<br/>
-				
-				</div>
-		</div>
-	</div>
-
+<h1>Ini Home, Coba / Datadokter</h1>
 @endsection

@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Auth\AuthenticationException;
 use Auth;
+
 class Handler extends ExceptionHandler
 {
     /**
@@ -58,9 +59,6 @@ class Handler extends ExceptionHandler
         $guard = array_get($exception->guards(), 0);
 
         switch ($guard) {
-            case 'kostariateam':
-                $login = 'kostariateam.login';
-                break;
             case 'admin':
                 $login = 'admin.login';
                 break;
