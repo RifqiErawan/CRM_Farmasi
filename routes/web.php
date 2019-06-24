@@ -46,3 +46,7 @@ Route::prefix('admin')->group(function(){
 Route::get('/produk/edit/{kode}','Produk@editObat');
 Route::post('/produk/editObatAction','Produk@editObatAction');
 Route::get('/produk/delete/{kode}','Produk@deleteObat');
+
+Route::get('/rencanaKunjungan', 'RencanaKunjunganController@index');
+Route::get('/rencanaKunjungan/laporan/{id}', 'RencanaKunjunganController@laporan');
+Route::post('/rencanaKunjungan/laporanAction','RencanaKunjunganController@laporanAction');

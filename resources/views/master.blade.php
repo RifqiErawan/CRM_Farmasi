@@ -21,6 +21,7 @@
 
 			<a href="/produk" class="nav-link">List Produk</a>
 			<a href="/produk/add" class="nav-link">Input Produk Baru</a>
+			<a href="/rencanaKunjungan" class="nav-link">Rencana Kunjungan</a>
 		</nav>
 	</div>
 
