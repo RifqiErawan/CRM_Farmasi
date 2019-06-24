@@ -25,6 +25,7 @@ Route::get('/datadokter/hapus/{id}','DatadokterController@hapus');
 Route::get('/besarpotensi/home','BesarPotensiController@home');
 Route::post('/besarpotensi/store','BesarPotensiController@store');
 Route::get('/besarpotensi/input_potensi/{id}','BesarPotensiController@input_potensi');
+Route::post('/besarpotensi/hitung','BesarPotensiController@hitung');
 Route::get('/produk','Produk@show');
 Route::get('/produk/add','Produk@addProduk');
 Route::post('/produk/addAction','Produk@addAction');
@@ -49,3 +50,7 @@ Route::prefix('admin')->group(function(){
 Route::get('/produk/edit/{kode}','Produk@editObat');
 Route::post('/produk/editObatAction','Produk@editObatAction');
 Route::get('/produk/delete/{kode}','Produk@deleteObat');
+
+Route::get('/rencanaKunjungan', 'RencanaKunjunganController@index');
+Route::get('/rencanaKunjungan/laporan/{id}', 'RencanaKunjunganController@laporan');
+Route::post('/rencanaKunjungan/laporanAction','RencanaKunjunganController@laporanAction');

@@ -20,9 +20,12 @@
 	<h3 align="center">Edit Produk</h3>
 
 	<table class="table table border">
+		@foreach($produk as $prd)
 		<form action="/produk/editObatAction" method="post">
-	 {{ csrf_field() }}
-	 @foreach($produk as $prd)
+			 {{ csrf_field() }}
+			<tr>
+				<td><input type="hidden" name="kodeobat" value="{{$prd->kodeobat}}"></td>
+			</tr>
 			<tr class="form-group">
 				<td>Nama Obat</td>
 				<td><input class="form-control" type="text" name="namaobat" value="{{$prd->namaobat}}"></td>

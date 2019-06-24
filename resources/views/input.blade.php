@@ -32,7 +32,7 @@
  <div class="form-group row">
     <label class="col-sm-2 col-form-label" >Spesialis</label>
          <div class="col-sm-10">
-             <input class="form-control" type="text" name="spesialis" placeholder="Spesialis" required="required">
+             <input class="form-control" type="text" name="spesialisasi" placeholder="Spesialis" required="required">
         </div>
  </div>
 

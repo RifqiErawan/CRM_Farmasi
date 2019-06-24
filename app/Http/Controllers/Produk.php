@@ -48,15 +48,15 @@ class Produk extends Controller
 
     public function editObatAction(Request $prd){
     	DB::table('produk')->where('kodeobat',$prd->kodeobat)->update([
-    		'namaobat' =>$prd->namaobat,
-    		'aturanpakai' =>$prd->aturanpakai,
-    		'carakerjaobat' =>$prd->carakerjaobat,
-    		'efeksamping' =>$prd->efeksamping,
-    		'indikasi' =>$prd->indikasi,
-    		'jenisobat' =>$prd->jenisobat,
-    		'komposisi' =>$prd->komposisi,
-    		'kontraindikasi' =>$prd->kontraindikasi,
-    		'peringatanobat' =>$prd->peringatanobat
+    		'namaobat' => $prd->namaobat,
+    		'aturanpakai' => $prd->aturanpakai,
+    		'carakerjaobat' => $prd->carakerjaobat,
+    		'efeksamping' => $prd->efeksamping,
+    		'indikasi' => $prd->indikasi,
+    		'jenisobat' => $prd->jenisobat,
+    		'komposisi' => $prd->komposisi,
+    		'kontraindikasi' => $prd->kontraindikasi,
+    		'peringatanobat' => $prd->peringatanobat
     	]);
     	return redirect('/produk');
     }
