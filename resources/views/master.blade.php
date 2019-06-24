@@ -22,6 +22,7 @@
 			<a href="/produk" class="nav-link">List Produk</a>
 			<a href="/medrep" class="nav-link">Data Medrep</a>
 			<a href="/rencanaKunjungan" class="nav-link">Rencana Kunjungan</a>
+			<a href="/laporanKunjungan" class="nav-link">Laporan Kunjungan</a>
 		</nav>
 	</div>
 

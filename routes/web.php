@@ -66,3 +66,6 @@ Route::get('/rencanaKunjungan/laporan/{id}', 'RencanaKunjunganController@laporan
 Route::post('/rencanaKunjungan/laporanAction','RencanaKunjunganController@laporanAction');
 
 Route::get('/produk/export_excel','Produk@export');
+
+Route::get('/laporanKunjungan','laporanController@laporanKunjungan');
+Route::get('/laporanKunjungan/export','laporanController@exportKunjungan');
