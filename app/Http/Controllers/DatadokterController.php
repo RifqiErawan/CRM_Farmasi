@@ -25,7 +25,7 @@ class DatadokterController extends Controller
 	    // insert data ke table pegawai
 	    DB::table('dokter')->insert([
 		    'nama' => $request->nama,
-		    'spesialis' => $request->spesialis,
+		    'spesialisasi' => $request->spesialisasi,
 		    'kontak' => $request->kontak
 	    ]);
 	    // alihkan halaman ke halaman pegawai
