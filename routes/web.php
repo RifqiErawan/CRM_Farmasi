@@ -100,7 +100,6 @@ Route::get('/produk/export_excel','Produk@export');
 
 Route::get('/laporanKunjungan','laporanController@laporanKunjungan');
 Route::get('/laporanKunjungan/export','laporanController@exportKunjungan');
-<<<<<<< HEAD
 
-=======
->>>>>>> 05ee6a0576da269bbca6cfd85ae9d8049be24529
+Route::get('/laporanTransaksi','laporanController@laporanTransaksi');
+Route::get('/laporanTransaksi/export','laporanController@exportTransaksi');

@@ -12,13 +12,13 @@
 <div class="container">
         <div class="card">
             <div class="card-body">
-<<<<<<< HEAD
+
 <a href="/rencanaKunjungan"> Kembali</a>
  
-=======
+
 <a href="/datadokter"> Kembali</a>
 
->>>>>>> 05ee6a0576da269bbca6cfd85ae9d8049be24529
+
  <br/>
  <br/>
 

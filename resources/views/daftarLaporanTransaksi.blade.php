@@ -16,16 +16,17 @@
 
  <br/>
  <br/>
-<a href="/laporanKunjungan/export">Print Laporan Kunjungan</a>
+<a href="/laporanTransaksi/export">Print Laporan Kunjungan</a>
     <body>
 
                     <table class="table table-border">
                         <thead>
                             <th>Nama Dokter</th>
                             <th>Spesialisasi</th>
-                            <th>Kontak</th>
                             <th>Tanggal Kunjungan</th>
-                            <th>Catatan </th>
+                            <th>namaobat</th>
+                            <th>banyak</th>
+                            <th>harga</th>
                         </tr>
                         </thead>
                             @foreach($laporan as $d)
@@ -34,9 +35,10 @@
                              <tr>
                                 <td>{{ $d->nama }}</td>
                                 <td>{{ $d->spesialisasi }}</td>
-                                <td>{{ $d->kontak }}</td>
                                 <td>{{ $d->tglKunjungan }}</td>
-                                <td>{{ $d->catatan}}</td>
+                                <td>{{ $d->namaObat }}</td>
+                                <td>{{ $d->banyak }}</td>
+                                <td>{{ $d->harga }}</td>
                             </tr>
                             </tbody>
                             @endforeach
