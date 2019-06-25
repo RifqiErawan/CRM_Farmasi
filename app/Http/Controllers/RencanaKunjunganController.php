@@ -26,7 +26,7 @@ class RencanaKunjunganController extends Controller
     		'kontak' =>$lap->kontak,
     		'tglKunjungan' =>$lap->tglKunjungan,
     		'catatan' =>$lap->catatan,
-    		'buktiKunjungan' =>''
+    		'buktiKunjungan' =>$lap->buktiKunjungan
     	]);
     	return redirect('/rencanaKunjungan');
 	}

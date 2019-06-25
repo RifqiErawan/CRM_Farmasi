@@ -57,7 +57,7 @@
                             </tr>
                             <tr>
                                 <td>Bukti Kunjungan</td>
-                                <td></td>
+                                <td><input type="string" name="buktiKunjungan"></td>
                             </tr>
                             <tr>
                                 <td colspan="2" align="center"><input type="submit" name="submit" value="Simpan" class="btn btn-primary"></td>
