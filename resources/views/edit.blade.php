@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,7 +8,7 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 
 <div class="container">
 		<div class="card">
@@ -17,7 +17,7 @@
 <h3>Edit Data Dokter</h3>
 
 	<a href="/pegawai"> Kembali</a>
-	
+
 	<br/>
 	<br/>
 
@@ -25,24 +25,24 @@
 	<form action="/datadokter/update" method="post">
 	<div class="form-group row">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $d->id }}"> 
+		<input type="hidden" name="id" value="{{ $d->id }}">
 		<label class="col-sm-2 col-form-label" >Nama</label>
 			<div class="col-sm-10">
-		 		<input type="text" required="required" name="nama" value="{{ $d->nama }}"> 
+		 		<input type="text" required="required" name="nama" value="{{ $d->nama }}">
 		 	</div>
-	</div>	
+	</div>
 
 	<div class="form-group row">
 		<label class="col-sm-2 col-form-label" >Spesialis</label>
 		<div class="col-sm-10">
-		 	<input type="text" required="required" name="spesialisasi" value="{{ $d->spesialisasi }}"> 
+		 	<input type="text" required="required" name="spesialisasi" value="{{ $d->spesialisasi }}">
 		 </div>
 	</div>
 
 	<div class="form-group row">
 		<label class="col-sm-2 col-form-label" >Kontak</label>
 		<div class="col-sm-10">
-			<input type="number" required="required" name="kontak" value="{{ $d->kontak }}"> 
+			<input type="number" required="required" name="kontak" value="{{ $d->kontak }}">
 		</div>
 	</div>
 
@@ -51,8 +51,8 @@
                 <button type="submit" value="Simpan Data" class="btn btn-primary"> Simpan</button>
             </div>
         </div>
-	
-		
+
+
 	</form>
 	@endforeach
 

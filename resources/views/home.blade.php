@@ -1,14 +1,12 @@
-<!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
-<!-- isi bagian judul halaman -->
-<!-- cara penulisan isi section yang pendek -->
-
+@section('sidebar')
+@endsection
 
 
-<!-- isi bagian konten -->
-<!-- cara penulisan isi section yang panjang -->
+
 @section('konten')
+<<<<<<< HEAD
 
 <div class="container">
 		<div class="card">
@@ -54,3 +52,7 @@
 	</div>
 
 @endsection
+=======
+<h1>Ini Home, Coba / Datadokter</h1>
+@endsection
+>>>>>>> a42ed2d73cc471bb80787586a55186deb75d5896

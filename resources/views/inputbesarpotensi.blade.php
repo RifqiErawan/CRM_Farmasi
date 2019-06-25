@@ -1,7 +1,7 @@
 
 
  <!-- Menghubungkan dengan view template master -->
- @extends('master')
+ @extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -10,7 +10,7 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 
 <div class="container">
 		<div class="card">
@@ -19,7 +19,7 @@
 <h3>Hitung Besar Potensi</h3>
 
 	<a href="/besarpotensi/home"> Kembali</a>
-	
+
 	<br/>
 	<br/>
 
@@ -27,12 +27,12 @@
 	<form action="/besarpotensi/hitung/{{ $d->id }}" method="POST">
 	<div class="form-group row">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $d->id }}"> 
+		<input type="hidden" name="id" value="{{ $d->id }}">
 		<label class="col-sm-2 col-form-label" >Nama</label>
 			<div class="col-sm-10">
-		 		<span>{{$d->nama}}</span> 
+		 		<span>{{$d->nama}}</span>
 		 	</div>
-	</div>	
+	</div>
     @endforeach
 <!-- 
 	<div class="form-group row">
@@ -71,14 +71,11 @@
     </div>
 
     <input type="submit" value="Jumlahkan">
-		
+
 	</form>
-	
+
 
 </div>
 </div>
 </div>
 @endsection
-
-
-

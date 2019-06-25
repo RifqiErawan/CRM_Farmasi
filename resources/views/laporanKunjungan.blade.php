@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,12 +8,12 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 <div class="container">
         <div class="card">
             <div class="card-body">
 <a href="/datadokter"> Kembali</a>
- 
+
  <br/>
  <br/>
 
@@ -28,8 +28,8 @@
                                  <td><input type="hidden" name="nama" value="{{$d->nama}}"></td>
                                  <td><input type="hidden" name="spesialisasi" value="{{$d->spesialisasi}}"></td>
                                  <td><input type="hidden" name="kontak" value="{{$d->kontak}}"></td>
-                             </tr>   
-                            
+                             </tr>
+
                             <tr>
                                 <td>Nama Dokter</td>
                                 <td>{{ $d->nama }}</td>
@@ -55,7 +55,7 @@
                             </tr>
                             </form>
                             @endforeach
-                        
+
                     </table>
     </body>
 

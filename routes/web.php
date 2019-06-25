@@ -56,12 +56,12 @@ Route::prefix('admin')->group(function(){
 });
 
 Route::prefix('datadokter')->group(function(){
-  Route::get('/','DatadokterController@home');
-  Route::get('/input','DatadokterController@input');
-  Route::post('/store','DatadokterController@store');
-  Route::get('/edit/{id}','DatadokterController@edit');
-  Route::post('/update','DatadokterController@update');
-  Route::get('/hapus/{id}','DatadokterController@hapus');
+  Route::get('/','DatadokterController@home')->name('datadokter.show');
+  Route::get('/input','DatadokterController@input')->name('datadokter.show');
+  Route::post('/store','DatadokterController@store')->name('datadokter.store');
+  Route::get('/edit/{id}','DatadokterController@edit')->name('datadokter.edit');
+  Route::post('/update','DatadokterController@update')->name('datadokter.update');
+  Route::get('/hapus/{id}','DatadokterController@hapus')->name('datadokter.delete');
 });
 
 Route::prefix('besarpotensi')->group(function(){

@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,7 +8,7 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 <div class="container">
 		<div class="card">
 			<div class="card-body">
@@ -65,9 +65,9 @@
 			<tr>
 				<td colspan="2" align="center"><input type="submit" name="submit" value="Submit Data" class="btn btn-primary"></td>
 			</tr>
-		</form>	
+		</form>
 	</table>
-	
+
 </body>
 </html>
 @endsection

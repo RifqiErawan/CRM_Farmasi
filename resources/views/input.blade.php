@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,15 +8,15 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 <div class="container">
 		<div class="card">
 			<div class="card-body">
 
 <h3>Input Data Dokter</h3>
- 
+
  <a href="/datadokter"> Kembali</a>
- 
+
  <br/>
  <br/>
 
@@ -28,7 +28,7 @@
              <input class="form-control" type="text" name="nama" placeholder="Nama" required="required">
         </div>
  </div>
-    
+
  <div class="form-group row">
     <label class="col-sm-2 col-form-label" >Spesialis</label>
          <div class="col-sm-10">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-     
+
       </form>
 
       </div>
