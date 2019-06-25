@@ -19,6 +19,8 @@
 <body>
 	<h3 align="center">List Produk</h3>
 
+	<a href="/produk/export_excel" class="btn btn-succes">Export Data</a>
+
 	<table align="center" width="80%" class="table table-border">
 		@foreach($produk as $prd )
 		<tr>	

@@ -12,15 +12,14 @@
 <div class="container">
         <div class="card">
             <div class="card-body">
-<a href="/"> Kembali</a>
+<a href="/datadokter"> Kembali</a>
  
  <br/>
  <br/>
 
     <body>
+
                     <table class="table table-border">
-                     
-                        
                             @foreach($dokter as $d)
                             <form action="/rencanaKunjungan/laporanAction" method="post">
                                  {{ csrf_field() }}
