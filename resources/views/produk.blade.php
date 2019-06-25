@@ -19,7 +19,7 @@
 <body>
 	<h3 align="center">List Produk</h3>
 
-	<a href="/produk/export_excel" class="btn btn-succes">Export Data</a>
+	<a href="/produk/export_excel">Export Data</a>
 
 	<table align="center" width="80%" class="table table-border">
 		@foreach($produk as $prd )
@@ -50,7 +50,7 @@
 		</tr>
 		@endforeach
 	</table>
-	<a href="/produk/add" align="right">Tambah Data Produk</a>
+	<a href="/produk/add" align="right" class="btn btn-success">Tambah Data Produk</a>
 </body>
 
 

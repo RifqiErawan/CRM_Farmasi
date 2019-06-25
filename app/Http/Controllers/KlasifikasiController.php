@@ -17,7 +17,7 @@ class KlasifikasiController extends Controller
 			
 			$total_peresepan = $dokter->sum('potensi');
 
-		return $potensi;
+		return $total_peresepan;
  
     	// mengirim data dokter ke view index   
     	return view('klasifikasi',compact('dokter','total_peresepan'));

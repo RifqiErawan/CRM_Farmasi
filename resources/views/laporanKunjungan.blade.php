@@ -12,13 +12,13 @@
 <div class="container">
         <div class="card">
             <div class="card-body">
-<<<<<<< HEAD
+
 <a href="/rencanaKunjungan"> Kembali</a>
  
-=======
+
 <a href="/datadokter"> Kembali</a>
 
->>>>>>> 05ee6a0576da269bbca6cfd85ae9d8049be24529
+
  <br/>
  <br/>
 
@@ -57,7 +57,7 @@
                             </tr>
                             <tr>
                                 <td>Bukti Kunjungan</td>
-                                <td></td>
+                                <td><input type="string" name="buktiKunjungan"></td>
                             </tr>
                             <tr>
                                 <td colspan="2" align="center"><input type="submit" name="submit" value="Simpan" class="btn btn-primary"></td>

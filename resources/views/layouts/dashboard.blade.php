@@ -62,6 +62,9 @@
             <li class="nav-item {{ Request::is('laporanKunjungan') ? 'active' : '' }}">
               <a href="/laporanKunjungan" class="nav-link">Laporan Kunjungan</a>
             </li>
+            <li>
+              <a href="/laporanTransaksi" class="nav-link">Laporan Transaksi</a>
+            </li>
             </li>
 	          @yield('sidebar')
 	        </ul>
