@@ -31,11 +31,9 @@
 			<td>{{ $d->spesialisasi }}</td>
 			<td>
 			@if (empty($d->potensi))
-<<<<<<< HEAD
-            <a class="btn btn-primary btn-sm" href="/besarpotensi/input_potensi/{{ $d->id }}">Hitung</a> 
-=======
+
             <a class="btn btn-primary btn-sm" href="/besarpotensi/input_potensi/{{ $d->id }}">Hitung</a>
->>>>>>> a42ed2d73cc471bb80787586a55186deb75d5896
+
 			@endif
 		  </td>
 		</tr>

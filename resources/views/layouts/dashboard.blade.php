@@ -27,50 +27,39 @@
 
 	      <div class="sidebar-wrapper">
 	        <ul class="nav">
-            <li class="nav-item ">
+            @if(Auth::user('admin'))
+            <li class="nav-item {{ Request::is('admin') ? 'active' : '' }}">
               <a class="nav-link" href="{{route('admin.dashboard')}}">
-                <i class="material-icons">dashboard</i>
                 <p>Dashboard</p>
               </a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="#">
-                <i class="material-icons">person</i>
-                <p>Medical Representative</p>
+            @else
+            <li class="nav-item {{ Request::is('admin') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('admin.dashboard')}}">
+                <p>Dashboard</p>
               </a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="#">
-                <i class="material-icons">content_paste</i>
-                <p>Kelola Tugas</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="#">
-                <i class="material-icons">library_books</i>
-                <p>Laporan</p>
-              </a>
-            </li>
+            @endif
             <!--  -->
-            <li class="nav-item ">
-              <a class="nav-link active"href="/datadokter">Data Dokter</a>
+            <li class="nav-item {{ Request::is('datadokter') ? 'active' : '' }} ">
+              <a class="nav-link "href="/datadokter">Data Dokter</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::is('besarpotensi/home') ? 'active' : '' }}">
               <a class="nav-link" href="/besarpotensi/home">Input Besar Potensi</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::is('klasifikasi') ? 'active' : '' }}">
               <a class="nav-link" href="/klasifikasi">Klasifikasi Dokter</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::is('produk') ? 'active' : '' }}">
               <a href="/produk" class="nav-link">List Produk</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::is('medrep') ? 'active' : '' }}">
               <a href="/medrep" class="nav-link">Data Medrep</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::is('rencanaKunjungan') ? 'active' : '' }}">
               <a href="/rencanaKunjungan" class="nav-link">Rencana Kunjungan</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::is('laporanKunjungan') ? 'active' : '' }}">
               <a href="/laporanKunjungan" class="nav-link">Laporan Kunjungan</a>
             </li>
             </li>
@@ -142,21 +131,6 @@
 	          <nav class="float-left">
 	            <ul>
 	              <li>
-	                <a href="https://www.creative-tim.com">
-	                  Creative Tim
-	                </a>
-	              </li>
-	              <li>
-	                <a href="https://creative-tim.com/presentation">
-	                  About Us
-	                </a>
-	              </li>
-	              <li>
-	                <a href="http://blog.creative-tim.com">
-	                  Blog
-	                </a>
-	              </li>
-	              <li>
 	                <a href="https://www.creative-tim.com/license">
 	                  Licenses
 	                </a>
@@ -167,8 +141,7 @@
 	            &copy;
 	            <script>
 	              document.write(new Date().getFullYear())
-	            </script>, made with <i class="material-icons">favorite</i> by
-	            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+	            </script>, made with <i class="material-icons">favorite</i> in Ciwaruga, template by Creative Tim. - JTK 2019
 	          </div>
 	        </div>
 	      </footer>

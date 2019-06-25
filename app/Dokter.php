@@ -16,8 +16,8 @@ class Dokter extends Model
         'jadwal',
     ];
 
-    public $timestampt = false;
-    
+    public $timestamps = false;
+
     public function jadwal(){
         return $this->belongsTo('App\Dokter');
     }
