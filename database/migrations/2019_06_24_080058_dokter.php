@@ -18,9 +18,11 @@ class Dokter extends Migration
             $table->string('nama');
             $table->string('spesialisasi');
             $table->string('kontak');
-            $table->string('potensi');
-            $table->string('status');
-            $table->string('idJadwal');
+            $table->string('potensi')->nullable();
+            $table->string('status')->nullable();
+            $table->string('idJadwal')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

@@ -10,16 +10,16 @@ class DatadokterController extends Controller
     public function home(){
         // mengambil data dari table dokter
     	$dokter = Dokter::all();
- 
+
     	// mengirim data dokter ke view index
-    	return view('home',['dokter' => $dokter]);
-		
+    	return view('datadokter',['dokter' => $dokter]);
+
 	}
- 
+
 	public function input(){
 		return view('input');
 	}
- 
+
     public function store(Request $request)
     {
 	    // insert data ke table pegawai
@@ -41,7 +41,7 @@ class DatadokterController extends Controller
         $dokter = DB::table('dokter')->where('id',$id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
         return view('edit',['dokter' => $dokter]);
-    
+
     }
 
     public function update(Request $request)
@@ -61,7 +61,7 @@ class DatadokterController extends Controller
     {
         // menghapus data pegawai berdasarkan id yang dipilih
         DB::table('dokter')->where('id',$id)->delete();
-            
+
         // alihkan halaman ke halaman pegawai
         return redirect('/datadokter');
     }

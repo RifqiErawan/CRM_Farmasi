@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,26 +8,26 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 <div class="container">
 		<div class="card">
 			<div class="card-body">
 
 <h3>Input Jadwal Dokter</h3>
- 
+
  <a href="/datadokter"> Kembali</a>
- 
+
  <br/>
  <br/>
  @foreach($dokter as $d)
- 
+
  <form action="/jadwaldokter/store/{{$d->id}}" method="post">
  <div class="form-group row">
  {{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $d->id }}"> 
+		<input type="hidden" name="id" value="{{ $d->id }}">
     <label class="col-sm-2 col-form-label" >Nama Dokter</label>
     <div class="col-sm-10">
-         <span>{{$d->nama}}</span> 
+         <span>{{$d->nama}}</span>
     </div>
  </div>
 
@@ -41,12 +41,21 @@
  </div>
 
  <div class="form-group row">
-    <label class="col-sm-2 col-form-label" >Hari</label>
+    <label for="hari" class="col-sm-2 col-form-label" >Hari</label>
          <div class="col-sm-10">
-             <input class="form-control" type="text" name="hari" placeholder="Hari Praktek" required="required">
+         <select class="form-control" name="hari" id="hari" required="required">
+               <option>Senin</option>
+               <option>Selasa</option>
+               <option>Rabu</option>
+               <option>Kamis</option>
+               <option>Jumat</option>
+               <option>Sabtu</option>
+               <option>Minggu</option>
+          </select>
+             <!-- <input class="form-control" type="text" name="hari" placeholder="Hari Praktek" required="required"> -->
         </div>
  </div>
-    
+
  <div class="form-group row">
     <label class="col-sm-2 col-form-label" >Waktu Buka</label>
          <div class="col-sm-10">
@@ -67,7 +76,7 @@
             </div>
         </div>
 
-     
+
       </form>
 
       </div>

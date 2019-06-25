@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
@@ -8,7 +8,7 @@
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
-@section('konten')
+@section('content')
 <div class="container">
         <div class="card">
             <div class="card-body">
@@ -29,9 +29,9 @@
                             <th>Tanggal Kunjungan</th>
                         </tr>
                         </thead>
-                            @foreach($laporan as $d)   
+                            @foreach($laporan as $d)
                              <tbody>
-                                 
+
                              <tr>
                                 <td>{{ $d->created_At }}</td>
                                 <td>{{ $d->uploaded_at }}</td>
@@ -42,7 +42,7 @@
                             </tr>
                             </tbody>
                             @endforeach
-                        
+
                     </table>
     </body>
 

@@ -1,14 +1,12 @@
-<!-- Menghubungkan dengan view template master -->
-@extends('master')
+@extends('layouts.dashboard')
 
-<!-- isi bagian judul halaman -->
-<!-- cara penulisan isi section yang pendek -->
-
+@section('sidebar')
+@endsection
 
 
-<!-- isi bagian konten -->
-<!-- cara penulisan isi section yang panjang -->
+
 @section('konten')
+<<<<<<< HEAD
 
 <div class="container">
 		<div class="card">
@@ -39,7 +37,7 @@
 			<td>
             <a class="btn btn-warning btn-sm" href="/datadokter/edit/{{ $d->id }}">Edit</a> |
             <a class="btn btn-danger btn-sm" href="/datadokter/hapus/{{ $d->id }}">Hapus</a> |
-            <a class="btn btn-danger btn-sm" href="/jadwaldokter/input/{{ $d->id }}">Jadwal Dokter</a>
+            <a class="btn btn-primary btn-sm" href="/jadwaldokter/input/{{ $d->id }}">Jadwal Dokter</a>
 
 			</td>
 		</tr>
@@ -54,3 +52,7 @@
 	</div>
 
 @endsection
+=======
+<h1>Ini Home, Coba / Datadokter</h1>
+@endsection
+>>>>>>> a42ed2d73cc471bb80787586a55186deb75d5896
