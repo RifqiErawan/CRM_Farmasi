@@ -29,6 +29,7 @@
                                 <th>Status</th>
                                 <th>idJadwal</th>
                                 <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,7 +56,10 @@
                                     {{ $d->idJadwal }}
                                 </td>
                                 <td>
-                                    <a href="/rencanaKunjungan/laporan/{{ $d->id }}" class="btn btn-warning">Buat Laporan</a>
+                                    <a href="/rencanaKunjungan/laporan/{{ $d->id }}" class="btn btn-warning">Buat Laporan Kunjungan</a>
+                                </td>
+                                <td>
+                                    <a href="/rencanaKunjungan/transaksi/{{ $d->id }}" class="btn btn-warning">Input Hasil Transaksi</a>
                                 </td>
                             </tr>
                             @endforeach

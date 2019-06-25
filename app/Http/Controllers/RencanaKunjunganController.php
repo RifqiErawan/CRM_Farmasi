@@ -25,8 +25,28 @@ class RencanaKunjunganController extends Controller
     		'spesialisasi' =>$lap->spesialisasi,
     		'kontak' =>$lap->kontak,
     		'tglKunjungan' =>$lap->tglKunjungan,
+    		'catatan' =>$lap->catatan,
     		'buktiKunjungan' =>''
     	]);
     	return redirect('/rencanaKunjungan');
 	}
+
+	public function transaksi($id)
+	{
+   		$rencanaKunjungan = DB::table('dokter')->where('id',$id)->get();
+   		return view('laporanTransaksi', ['dokter' => $rencanaKunjungan]);
+	}
+	public function transaksiAction(Request $transaksi)
+	{
+		DB::table('datatransaksi')->insert([
+    		'nama' =>$transaksi->nama,
+    		'spesialisasi' =>$transaksi->spesialisasi,
+    		'tglKunjungan' =>$transaksi->tglKunjungan,
+    		'namaObat' =>$transaksi->namaObat,
+    		'banyak' =>$transaksi->banyak,
+    		'harga' =>$transaksi->harga
+    	]);
+    	return redirect('/rencanaKunjungan');
+	}
 }
+

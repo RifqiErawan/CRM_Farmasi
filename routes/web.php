@@ -12,7 +12,7 @@
 */
 //default route
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
@@ -64,8 +64,12 @@ Route::post('/jadwaldokter/store/{dokter}','JadwalDokterController@store');
 Route::get('/rencanaKunjungan', 'RencanaKunjunganController@index');
 Route::get('/rencanaKunjungan/laporan/{id}', 'RencanaKunjunganController@laporan');
 Route::post('/rencanaKunjungan/laporanAction','RencanaKunjunganController@laporanAction');
+Route::get('/rencanaKunjungan/transaksi/{id}', 'RencanaKunjunganController@transaksi');
+Route::post('/rencanaKunjungan/transaksiAction','RencanaKunjunganController@transaksiAction');
+
 
 Route::get('/produk/export_excel','Produk@export');
 
 Route::get('/laporanKunjungan','laporanController@laporanKunjungan');
 Route::get('/laporanKunjungan/export','laporanController@exportKunjungan');
+

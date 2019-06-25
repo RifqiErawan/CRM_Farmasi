@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableLaporanKunjungan extends Migration
+class CreateDatatransaksi extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateTableLaporanKunjungan extends Migration
      */
     public function up()
     {
-        Schema::create('table_laporan_kunjungan', function (Blueprint $table) {
+        Schema::create('datatransaksi', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('nama');
             $table->string('spesialisasi');
-            $table->string('kontak');
             $table->date('tglKunjungan');
-            $table->text('catatan');
-            $table->string('buktiKunjungan');
+            $table->string('namaObat');
+            $table->integer('banyak');
+            $table->integer('harga');
         });
     }
 
@@ -32,6 +32,6 @@ class CreateTableLaporanKunjungan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_laporan_kunjungan');
+        Schema::dropIfExists('datatransaksi');
     }
 }

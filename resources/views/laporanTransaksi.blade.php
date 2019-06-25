@@ -21,13 +21,12 @@
 
                     <table class="table table-border">
                             @foreach($dokter as $d)
-                            <form action="/rencanaKunjungan/laporanAction" method="post">
+                            <form action="/rencanaKunjungan/transaksiAction" method="post">
                                  {{ csrf_field() }}
                              <tr>
                                  <td><input type="hidden" name="id" value="{{$d->id}}"></td>
                                  <td><input type="hidden" name="nama" value="{{$d->nama}}"></td>
                                  <td><input type="hidden" name="spesialisasi" value="{{$d->spesialisasi}}"></td>
-                                 <td><input type="hidden" name="kontak" value="{{$d->kontak}}"></td>
                              </tr>   
                             
                             <tr>
@@ -39,20 +38,20 @@
                                 <td>{{ $d->spesialisasi }}</td>
                             </tr>
                             <tr>
-                                <td>Kontak</td>
-                                <td>{{ $d->kontak }}</td>
-                            </tr>
-                            <tr>
                                 <td>Tanggal Kunjungan</td>
                                 <td><input type="date" name="tglKunjungan"></td>
                             </tr>
                             <tr>
-                                <td>Catatan Hasil Kunjungan</td>
-                                <td><input type="text" name="catatan"></td>
+                                <td>Nama Obat</td>
+                                <td><input type="string" name="namaObat"></td>
                             </tr>
                             <tr>
-                                <td>Bukti Kunjungan</td>
-                                <td></td>
+                                <td>Banyak</td>
+                                <td><input type="integer" name="banyak"></td>
+                            </tr>
+                            <tr>
+                                <td>Harga</td>
+                                <td><input type="integer" name="harga"></td>
                             </tr>
                             <tr>
                                 <td colspan="2" align="center"><input type="submit" name="submit" value="Simpan" class="btn btn-primary"></td>
