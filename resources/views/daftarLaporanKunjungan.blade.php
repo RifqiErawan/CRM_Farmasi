@@ -26,6 +26,7 @@
                             <th>Kontak</th>
                             <th>Tanggal Kunjungan</th>
                             <th>Catatan </th>
+                            <th>Bukti Kunjungan</th>
                         </tr>
                         </thead>
                             @foreach($laporan as $d)
@@ -37,6 +38,7 @@
                                 <td>{{ $d->kontak }}</td>
                                 <td>{{ $d->tglKunjungan }}</td>
                                 <td>{{ $d->catatan}}</td>
+                                <td>{{ $d->buktiKunjungan}}</td>
                             </tr>
                             </tbody>
                             @endforeach
